@@ -6,6 +6,7 @@ farTest=dict()
 for line in cities:
     url="https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=%D7%AA%D7%9C%25%D7%90%D7%91%D7%99%D7%91&"
     dest="destinations="+line
+    key= "enter key"
     response = requests.get(url+dest+key)
     res= response.content.decode('utf-8')  
     info = json.loads(res)
